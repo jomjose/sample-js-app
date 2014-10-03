@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+    
+    <head>
+        <title>Example of architecture</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
+    
+    <body>
+        <div class="row">
+            <div class="large-9 push-3 columns left" id="object-panel"></div>
+            <div class="large-3 pull-9 columns">
+                <div id="searchingTool" class="side-nav"></div>
+                <div id="add-object" class="side-nav"></div>
+            </div>
+        </div>
+        <footer class="row">
+            <div class="large-12 columns">
+                <hr />
+                <div class="row">
+                    <div class="large-6 columns">
+                        <p>Jom Jose <small>enge.jomjose@gmail.com</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script type="text/x-handlebars-template" id="objectPanel-template">
+            < h1 > Things < /h1>
+	    <div class="row" id="container"></div >
+        </script>
+        <script type="text/x-handlebars-template" id="objectPanelObject-template">
+            < div class = "object large-4 small-6 columns left" > < img src = 'http://placehold.it/500x300&text={{name}}' > < div class = "panel" > < h5 > {
+                {
+                    name
+                }
+            } < /h5>
+				<p class="subheader">{{description}}</p > < /div>  
+		</div >
+        </script>
+        <script type="text/x-handlebars-template" id="searchingTool-template">
+            < h3 > Search < /h3>
+        <input id="isearch" type="text" name='isearch' placeholder="Search..."/ > < button id = "bsearch" > Search < /button>
+    	<button id="breset">Reset</button >
+        </script>
+        <script type="text/x-handlebars-template" id="addObjectTool-template">
+            < h3 > Add < /h3>
+        <input id="iobjectname" type="text" name='iobjectname' placeholder="Insert name"/ > < textarea id = "tdescription"
+            rows = "4"
+            cols = "50"
+            placeholder = "Insert description" > < /textarea>
+		<button id="isend">Add</button > < button id = "iclear" > Clear < /button>
+	
+        </script>
+        <script type="text/javascript" src="js/libs/jquery.js"></script>
+        <script type="text/javascript" src="js/libs/foundation.min.js"></script>
+        <script type="text/javascript" src="js/libs/handlebars.js"></script>
+        <script type="text/javascript" src="js/core.js"></script>
+        <script type="text/javascript" src="js/sandbox.js"></script>
+        <script type="text/javascript" src="js/modules/searchingTool.js"></script>
+        <script type="text/javascript" src="js/modules/addObject.js"></script>
+        <script type="text/javascript" src="js/modules/objectPanel.js"></script>
+
+</html>
