@@ -1,0 +1,15 @@
+@import url("normalize.css");
+@import url("foundation.min.css");
+
+.subheader{
+	word-break: break-all;
+}
+
+.object {
+	transition: opacity 0.5s;
+	-webkit-transition: opacity 0.5s; /* Safari */
+}
+
+textarea {
+    resize: none;
+}
